@@ -42,7 +42,6 @@ namespace SportLifeScraper
                     } catch { }                    
                 }
             }
-            int h = 24;
         }
         static void Main(string[] args)
         {
