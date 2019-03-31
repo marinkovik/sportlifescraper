@@ -1,0 +1,10 @@
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\bin\Debug\SportLifeScraper.exe.config
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\bin\Debug\SportLifeScraper.exe
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\bin\Debug\SportLifeScraper.pdb
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\obj\Debug\SportLifeScraper.csprojAssemblyReference.cache
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\obj\Debug\SportLifeScraper.csproj.CoreCompileInputs.cache
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\obj\Debug\SportLifeScraper.exe
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\obj\Debug\SportLifeScraper.pdb
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\bin\Debug\WebDriver.dll
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\bin\Debug\WebDriver.xml
+C:\Users\Slobodan\source\repos\SportLifeScraper\SportLifeScraper\obj\Debug\SportLifeScraper.csproj.CopyComplete
