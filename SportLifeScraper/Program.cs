@@ -22,7 +22,6 @@ namespace SportLifeScraper
             driver.FindElement(By.XPath("//*[@id='prikaz_select']/option[2]")).Click();
             System.Threading.Thread.Sleep(2000);
             var divs = driver.FindElement(By.Id("template-container_0")).FindElements(By.ClassName("result-row"));
-            divs.Sh
             foreach (var div in divs)
             {
                 var tmpDiv = div.FindElements(By.ClassName("open-table-1")).ToList();
@@ -43,6 +42,7 @@ namespace SportLifeScraper
                     } catch { }                    
                 }
             }
+            int h = 24;
         }
         static void Main(string[] args)
         {
