@@ -14,7 +14,7 @@ namespace SportLifeScraper
         {
             var currentWinCoef = 1.00;
             var minimumCoef = 1.90;
-            var totalMaximumCoef = 90.00;
+            var totalMaximumCoef = 1000.00;
             List<string> footballResults = new List<string>();
             IWebDriver driver = new ChromeDriver(@"C:\chromedriverfolder");
             driver.Url = "http://sportlife.com.mk/Results";
@@ -31,11 +31,20 @@ namespace SportLifeScraper
                     {
                         if ((float.Parse(div.FindElement(By.ClassName("select-qu")).Text.ToString(), System.Globalization.CultureInfo.InvariantCulture)) >= minimumCoef)
                         {
-                            footballResults.Add(tmpDiv[3].Text.ToString() + " vs " + tmpDiv[7].Text.ToString() + " with coeficient " + div.FindElement(By.ClassName("select-qu")).Text.ToString());
+                            var goalsHome = int.Parse(tmpDiv[9].Text.ToString().Split(':').First());
+                            var goalsGuest = int.Parse(tmpDiv[9].Text.ToString().Split(':').Last());
+                            var tip = "";
+                            if (goalsHome > goalsGuest)
+                                tip = "1";
+                            else if (goalsHome < goalsGuest)
+                                tip = "2";
+                            else
+                                tip = "x";
+                            footballResults.Add(tmpDiv[3].Text.ToString() + " vs " + tmpDiv[7].Text.ToString() + " with coeficient " + div.FindElement(By.ClassName("select-qu")).Text.ToString() + " with tip " + tip);
                             currentWinCoef *= (float.Parse(div.FindElement(By.ClassName("select-qu")).Text.ToString(), System.Globalization.CultureInfo.InvariantCulture));
                             if (currentWinCoef > totalMaximumCoef)
                             {
-                                footballResults.Add("Vkupno " + Math.Round(currentWinCoef,2) + " koeficient.");
+                                footballResults.Add("Total " + Math.Round(currentWinCoef,2) + " coeficient.");
                                 break;
                             }
                         }
