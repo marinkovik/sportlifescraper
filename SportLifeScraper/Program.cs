@@ -31,7 +31,7 @@ namespace SportLifeScraper
                     {
                         if ((float.Parse(div.FindElement(By.ClassName("select-qu")).Text.ToString(), System.Globalization.CultureInfo.InvariantCulture)) >= minimumCoef)
                         {
-                            footballResults.Add(tmpDiv[2].Text.ToString() + " vs " + tmpDiv[3].Text.ToString() + " with coeficient " + div.FindElement(By.ClassName("select-qu")).Text.ToString());
+                            footballResults.Add(tmpDiv[3].Text.ToString() + " vs " + tmpDiv[7].Text.ToString() + " with coeficient " + div.FindElement(By.ClassName("select-qu")).Text.ToString());
                             currentWinCoef *= (float.Parse(div.FindElement(By.ClassName("select-qu")).Text.ToString(), System.Globalization.CultureInfo.InvariantCulture));
                             if (currentWinCoef > totalMaximumCoef)
                             {
